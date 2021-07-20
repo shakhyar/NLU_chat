@@ -49,7 +49,7 @@
           "That's great!",
           "You are smiling"],
          "context_set": ""
-        }
+        },
         {"tag": "random",
          "patterns": ["thats great", "so cool", "thats amazing", "thats great", "awesome", "super", "epic"],
          "responses": ["thats great", "so cool", "thats amazing", "thats great", "awesome", "super", "epic"],
