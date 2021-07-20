@@ -56,12 +56,12 @@
          "context_set": ""
         },
         {"tag": "news",
-         "patterns": ["whats the news", "can you tell me the news", "the latest news", "news"],
+         "patterns": ["whats the news", "tell me the news", "the latest news", "news"],
          "responses": ["Do you want to listen to some recent news?"],
          "context_set": "--news"
         },
         {"tag": "jotnote",
-         "patterns": ["can you note this", "can you jot this down", "write a note", "write down this", "jot down"],
+         "patterns": ["note this", "jot this down", "write a note", "write down this", "jot down"],
          "responses": [""],
          "context_set": "--note"
         },
@@ -72,7 +72,7 @@
          "context_set": "--info"
         },
         {"tag": "youtube",
-         "patterns": ["play", " play music", "can you play", "music", "youtube"],
+         "patterns": ["play", " play music", "music", "youtube"],
          "responses": [],
          "context_set": "--youtube"
         },
@@ -82,7 +82,7 @@
          "context_set": "--memorize"
         },
         {"tag": "joke",
-         "patterns": ["tell me a joke", "can you crack a joke"],
+         "patterns": ["tell me a joke", "crack a joke"],
          "responses": [""],
          "context_set": "--joke"
         }
