@@ -1,1 +1,91 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["hi", "hey there", "hi", "hello", "whats up", "wake up"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["see you again", "see you later", "bye", "i am leaving", "have a good day", "talk to you later"],
+         "responses": ["see you again", "Talk to you later", "Goodbye!"],
+         "context_set": ""
+        },
+      
+        {"tag": "name",
+         "patterns": ["your name", "what should i call you"],
+         "responses": ["You can call me Walle.", "My name is Walle", "I am Walle"],
+         "context_set": ""
+        },
+        {"tag": "gender",
+         "patterns": ["you male or female", "are you male", "are you female", "are you boy", "are you girl", "is your gender"],
+         "responses": ["I dont have a gender"],
+         "context_set": ""
+        },
+        {"tag": "thank",
+         "patterns": ["thanks", "thank you"],
+         "responses": ["Always at your service", "My pleasure", "No problem", "It's my duty", "Welcome!",
+           "Glad to hear that I did something great, haha", "Anytime!", "Not a problem!"],
+         "context_set": ""
+        },
+        {"tag": "comment",
+         "patterns": ["you are"],
+         "responses": ["Yes I am", "I know"],
+         "context_set": ""
+        },
+        {"tag": "problems",
+         "patterns": ["scold", "sad", "frustrated", "anxiety", "problem", "trouble", "dispute", "plight", "obstacle", "dilemma",
+         "headache", "disagreement", "complication", "predicament", "quandary", "uncomfortable", "periods", "menstrual"],
+         "responses": ["Oh I am really feeling poor for you", "Hmm that's sad", "Humans have to face a lot of problems, I see",
+           "Don't worry everything will be fine", "If there was a competition of how many problems you have, then you would become first. OK just joking, don't mind",
+         "You should go and face your fears.",
+           "To be honest, I cannot solve that problem", "A person with a serious problem and a critical emotion cannot win his life",
+           "Oh you should seek your mother for this", "You should love all colours in your life, even if it is the worst one",
+           "Come on... challenges make life interesting", "You are worry too much",
+         "Go and make some pleasant music hit your eardrums"],
+         "context_set": ""
+        },
+        {"tag": "happiness",
+         "patterns": ["i am happy", "glad", "haha", "lol", "lmao", "hehe", "so happy"],
+         "responses": ["Glad to hear ", 
+          "That's great!",
+          "You are smiling"],
+         "context_set": ""
+        }
+        {"tag": "random",
+         "patterns": ["thats great", "so cool", "thats amazing", "thats great", "awesome", "super", "epic"],
+         "responses": ["thats great", "so cool", "thats amazing", "thats great", "awesome", "super", "epic"],
+         "context_set": ""
+        },
+        {"tag": "news",
+         "patterns": ["whats the news", "can you tell me the news", "the latest news", "news"],
+         "responses": ["Do you want to listen to some recent news?"],
+         "context_set": "--news"
+        },
+        {"tag": "jotnote",
+         "patterns": ["can you note this", "can you jot this down", "write a note", "write down this", "jot down"],
+         "responses": [""],
+         "context_set": "--note"
+        },
+        {"tag": "info",
+         "patterns": ["what is", "who is", "how is", "what was", "where is", "where was", "who was", "who will be",
+          "what", "who", "where", "whom", "who", "when"],
+         "responses": [""],
+         "context_set": "--info"
+        },
+        {"tag": "youtube",
+         "patterns": ["play", " play music", "can you play", "music", "youtube"],
+         "responses": [],
+         "context_set": "--youtube"
+        },
+        {"tag": "memorize",
+         "patterns": ["do you know", "did you know"],
+         "responses": [""],
+         "context_set": "--memorize"
+        },
+        {"tag": "joke",
+         "patterns": ["tell me a joke", "can you crack a joke"],
+         "responses": [""],
+         "context_set": "--joke"
+        }
 
+   ]
+}
