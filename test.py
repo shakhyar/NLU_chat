@@ -27,5 +27,5 @@ else:
 
 
 #print(t.memorise("what is my favourite colour", "my favourite colour is lime"))
-desc, temp, humid = t.weather('f317f1f507f2d9f0a8aa1316d86507b8', 'delhi')
+desc, temp, humid = t.weather('', 'delhi')
 print(f"Desc: {desc}, temp: {temp}, humid: {humid}")
