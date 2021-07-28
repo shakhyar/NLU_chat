@@ -15,11 +15,6 @@
          "responses": ["You can call me Walle.", "My name is Walle", "I am Walle"],
          "context_set": ""
         },
-        {"tag": "gender",
-         "patterns": ["you male or female", "are you male", "are you female", "are you boy", "are you girl", "is your gender"],
-         "responses": ["I dont have a gender"],
-         "context_set": ""
-        },
         {"tag": "thank",
          "patterns": ["thanks", "thank you"],
          "responses": ["Always at your service", "My pleasure", "No problem", "It's my duty", "Welcome!",
