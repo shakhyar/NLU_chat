@@ -76,6 +76,11 @@
          "responses": [""],
          "context_set": "--memorize"
         },
+        {"tag": "weather",
+         "patterns": ["whats the weather", "weather", "will it rain today", "the temperature", "humid", "humidity"],
+         "responses": [""],
+         "context_set": "--weather"
+        },
         {"tag": "joke",
          "patterns": ["tell me a joke", "crack a joke"],
          "responses": [""],
