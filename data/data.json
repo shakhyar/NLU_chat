@@ -80,6 +80,11 @@
          "patterns": ["tell me a joke", "crack a joke"],
          "responses": [""],
          "context_set": "--joke"
+        },
+        {"tag": "blank",
+         "patterns": [""],
+         "responses": ["I am not sure"],
+         "context_set": "--unsure"
         }
 
    ]

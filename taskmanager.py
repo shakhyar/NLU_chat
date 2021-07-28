@@ -15,6 +15,7 @@ from urllib.request import urlopen
 import wikipedia
 from bs4 import BeautifulSoup as soup
 from pytube import YouTube
+from youtubesearchpython import VideosSearch
 
 from etc.memory import MemoryUnit
 from etc.qna_parser import Parser
@@ -154,16 +155,23 @@ class TaskManager(MemoryUnit):
         """
 
         --------------------------------------------------------------------------------------------
-        parsing https://news.google.com/news/rss with bs4, urlopen and lxml. Asks user for how many
-        headlines they want, converts to <class="int"> and use it for fetching required headlines
-        for n number of times in the list of all recent headlines.
+        :ARGS: Headlines(int)     [number of headlines you want]
+
+        :PARSING: https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en
+        change US in the above link to IN for Indian news, CA for Canada, and so on.
+
+        Keep it just https://news.google.com/rss for dynanimic location selection based on your IP 
+        address
+
+        :OUTPUT: returns a list of headlines
         --------------------------------------------------------------------------------------------
 
         """
+        self.nl = []
         try:
             self.int_num = int(headlines)
             print(self.int_num)
-            self.newsurl = "https://news.google.com/news/rss"
+            self.newsurl = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"
             self.root = urlopen(self.newsurl)
             self.xmlpage = self.root.read()
             self.root.close()
@@ -172,8 +180,9 @@ class TaskManager(MemoryUnit):
             for news in self.newslist[:self.int_num]:
                 # speak(news.pubDate.text)
                 sleep(1)
-                return news.title.text
-            pass
+                self.nl.append(news.title.text)
+            return self.nl
+
         except Exception as e:
             return f"Looks like something went wrong. Try connecting to internet. {e}"
 
@@ -198,27 +207,23 @@ class TaskManager(MemoryUnit):
 
     
     def parse_youtube_query(self, query):
-        """
-        Parse text to youtube video title only.
-        Examples:
-        'can you play some chill music from Youtube?'
-        >> returns 'some chill music'
+        videosSearch = VideosSearch(query, limit = 1)
+        self.get_youtube_audio(videosSearch.result()['result'][0]['link'])
 
-        """
-        pass
 
     def get_youtube_audio(self, link):
         """
-        INPUT: Youtube video link
+        :INPUT: Youtube video link
 
-        PROCESS: Downloads the audio of the video only, 
+        :PROCESS: Downloads the audio of the video only, 
         and saves it to music directory.
 
-        OUTPUT: Returns nothing, just saves the music    
+        :OUTPUT: Returns nothing, just saves the music at /music dir
         """
         self.yt = YouTube(link)
         self.t = self.yt.streams.filter(only_audio=True)
         self.t[0].download("music/")
+        print(f"downloaded {link}")
 
     """
     def player(self):
