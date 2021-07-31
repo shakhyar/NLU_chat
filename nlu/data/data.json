@@ -46,6 +46,11 @@
          "responses": ["thats great", "so cool", "thats amazing", "thats great", "awesome", "super", "epic"],
          "context_set": ""
         },
+        {"tag": "memorize",
+         "patterns": ["do you know", "did you know"],
+         "responses": [""],
+         "context_set": "--memorize"
+        },
         {"tag": "news",
          "patterns": ["whats the news", "tell me the news", "the latest news", "news"],
          "responses": ["Do you want to listen to some recent news?"],
@@ -66,11 +71,6 @@
          "patterns": ["play", " play music", "music", "youtube"],
          "responses": [],
          "context_set": "--youtube"
-        },
-        {"tag": "memorize",
-         "patterns": ["do you know", "did you know"],
-         "responses": [""],
-         "context_set": "--memorize"
         },
         {"tag": "weather",
          "patterns": ["whats the weather", "weather", "will it rain today", "the temperature", "humid", "humidity"],
@@ -96,7 +96,7 @@
         {"tag": "chat2",
          "patterns": ["do you love humans", "do you love me"],
          "responses": ["Yes I do!", "yes I love humans", "Of course I like you"],
-         "context_set": "--unsure"
+         "context_set": ""
         },
 
         {"tag": "blank",
