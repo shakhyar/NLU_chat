@@ -11,7 +11,7 @@
         }
         ,
         {"tag": "hru",
-         "patterns": ["how are you", "whats up", "howdy", "are you good"],
+         "patterns": ["how are you", "whats up", "howdy", "are you good", "hey whats up"],
          "responses": ["I am good, what about you?", "I am doing great!", "I am just sitting idle here", "Nothing much"],
          "context_set": ""
         },
