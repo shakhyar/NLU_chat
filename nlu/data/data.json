@@ -68,7 +68,7 @@
          "context_set": "--info"
         },
         {"tag": "youtube",
-         "patterns": ["can you play", " play the music", "music", "youtube", "play", "song],
+         "patterns": ["can you play", " play the music", "music", "youtube", "play", "song"],
          "responses": [],
          "context_set": "--youtube"
         },
