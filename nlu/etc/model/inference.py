@@ -16,6 +16,9 @@ with open('saved/tokenizer.pickle', 'rb') as handle:
 with open('saved/lbl_encoder.pickle', 'rb') as handle:
     lbl_encoder = pickle.load(handle)
 
+with open('saved/lbl_encoder.pickle', 'rb') as handle:
+    lbl_encoder = pickle.load(handle)
+
 
 def chat():
 	print("Start messaging with the bot (type quit to stop)!\n")
