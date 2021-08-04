@@ -1,17 +1,20 @@
 import json
 
-with open('/NLU_chat/nlu/etc/model/data/data.json') as file:
-    data = json.load(file)
-    
+def find_dataset(path):
+    with open(path) as file:
+        data = json.load(file)
+        return data
+
 training_sentences = []
 training_labels = []
 labels = []
 responses = []
 
-def prep_data():
+def prep_data(path):
     """
     :returns: training_sentences, training_labels, responses(list), labels, num_classes
     """
+    data = find_dataset(path=path)
     for intent in data['intents']:
         for pattern in intent['patterns']:
             training_sentences.append(pattern)
