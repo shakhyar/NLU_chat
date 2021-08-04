@@ -1,6 +1,6 @@
 import json
 
-with open('nlu/etc/model/data.json') as file:
+with open('/NLU_chat/nlu/etc/model/data/data.json') as file:
     data = json.load(file)
     
 training_sentences = []
